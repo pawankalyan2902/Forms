@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,110 @@
     <link rel="stylesheet" href="forms.css">
     <link rel="icon" type="image" href="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <body id="forms">
-       
-       <form action="">
-        <label for="name">YOUR NAME</label>
-        <input type="text" id="name">
-        <label for="email">Enter your email</label>
-        <input type="email" name="email" id="email">
-        <label for="number">Enter your phone number</label>
-        <input type="number" id="number" >
-        <label for="date">Enter your date of birth</label>
-        <input type="date" id="date">
-        <label for="password">Enter your password</label>
-        <input type="password" id="password">
-         <hr>
-    <h2>Enter the way to contact</h2>
-    <div id="radio"><label for="phone" >By phone</label>
-        <input type="radio" id="phone" value="phone">
-    </div>
-    <div id="radio"><label for="email" >By email</label>
-        <input type="radio" id="email" value="email">
-    </div>
-    <div id="radio"><label for="whatsup" >By whatsup</label>
-        <input type="radio" id="whatsup" value="whatsup">
-    </div>
-    <button>Submit</button>
-    </form>
-    </body>
-    
+
+
+<body id="forms">
+
+
+
+    <main>
+        <form action="">
+            <header>
+                <h1>Details for booking </h1>
+            </header>
+            <ul>
+                <h2>Personal details</h2>
+                <li><label for="name">YOUR NAME</label>
+                    <input type="text" id="name" required>
+                </li>
+                <li> <label for="number">Enter your phone number</label>
+                    <input type="number" id="number" max="10" required >
+                </li>
+                <li>
+                    <label for="date">Enter your date of birth</label>
+                    <input type="date" id="date"  min="18" max="100">
+                </li>
+
+            </ul>
+            <ul>
+                <li>
+                    <h2>Login crendentials</h2>
+                </li>
+                <li><label for="email">Your email</label>
+                    <input type="email" name="email" id="email" required>
+                </li>
+                <li> <label for="password">Enter your password</label>
+                    <input type="password" id="password" required minlength="7">
+                </li>
+            </ul>
+            <hr>
+            <h2>Enter the way to contact</h2>
+            <ul>
+                <div id="options">
+                    <li>
+                        <div id="radio"><label for="phone">By phone</label>
+                            <input type="radio" id="phone" value="phone" name="way_to_contact">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div id="radio"><label for="emails">By email</label>
+                            <input type="radio" id="emails" value="emails" name="way_to_contact">
+                        </div>
+                    </li>
+                    <li>
+                        <div id="radio"><label for="whatsup">By whatsup</label>
+                            <input type="radio" id="whatsup" value="whatsup" name="way_to_contact">
+                        </div>
+                    </li>
+            </ul>
+            <hr>
+            <h2>Selct any two of the means by which you want to travel</h2>
+            <ul id="radio_buttons">
+                <li>
+                    <div id="radio"><label for="transport">By car</label>
+                        <input type="checkbox" name="transport" id="transport" value="car">
+                    </div>
+                </li>
+
+                <li>
+                    <div id="radio"> <label for="transport">By Train</label>
+                        <input type="checkbox" name="transport" id="transport" value="Train">
+                    </div>
+                </li>
+
+                <li>
+                    <div id="radio"> <label for="transport">By bike</label>
+                        <input type="checkbox" name="transport" id="transport" value="bike">
+                    </div>
+                </li>
+            </ul>
+
+            <hr>
+            <!-- derop downs -->
+            <div id="agencies">
+                <label for="agency">Enter the agency</label>
+                <select name="agency" id="agency">
+                    <option value="Red bus">Red bus</option>
+                    <option value="Goibibo">Goibibo</option>
+                    <option value="Airavata">Airavata</option>
+                </select>
+
+            </div>
+            <div id="message">
+                <label for="user_message">Your message</label>
+                <textarea name="message" id="user_message" cols="30" rows="5"></textarea>
+            </div>
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </main>
 </body>
+
+</body>
+
 </html>
